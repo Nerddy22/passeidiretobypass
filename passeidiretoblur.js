@@ -13,7 +13,13 @@
 GM.addStyle(`
 .file-text-preview.hidden-content:after {
     backdrop-filter: none;
-    webkit-backdrop-filter: none;
+    webkit-backdrop-filter: none;}
+
+.register-banner.sticky-banner{
+    position: static;
+    bottom: 0px;
+    animation-name: none;
+    animation-duration: initial;}
 `);
 
 localStorage.setItem("file-text-preview.hidden-content", 0);
@@ -24,6 +30,7 @@ localStorage.setItem("file-text-preview.hidden-content:after", 0);
     'use strict';
     localStorage.clear()
     window.onload = function () {
-    	document.getElementsByClassName("register-banner sticky-banner")[0].remove()
+    	document.getElementsByClassName("register-banner sticky-banner")[0].remove();
+        document.getElementsByClassName("bubble-container")[0].remove();
     }
 })();
